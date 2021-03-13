@@ -108,16 +108,19 @@ input:focus {
     #fe7282,
     #fb7a5f
   );
-  width: 25%;
-  position: absolute;
-  bottom: 0;
+  width: 430px;
   top: 0;
-  transition: transform 1s ease;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  transition: all 1s ease;
   transform: translateX(-100%);
 }
+
 .show-sidebar {
   transform: translateX(0%);
 }
+
 .hide-sidebar {
   transform: translateX(-100%);
 }
@@ -161,6 +164,27 @@ input:focus {
 .social-links > * {
   color: #140411;
   padding: 0 15px 0;
+}
+.login {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.32s ease;
+  background: #ee61b1;
+  color: white;
+}
+.login:hover {
+  transform: scale(0.98);
+  background: #79bd61;
+  color: #140411;
+  border: 2px solid #00b1ff;
+}
+@media (max-width: 850px) {
+  .sidebar {
+    width: 100%;
+  }
 }
 
 @keyframes shrink-grow {

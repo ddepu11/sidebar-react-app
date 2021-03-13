@@ -5,6 +5,7 @@ import { AppContext } from "../App";
 
 const SideBarHeader = () => {
   const { hideSideBar } = useContext(AppContext);
+
   return (
     <div className="header flex">
       <div className="hLeft flex">
