@@ -199,7 +199,8 @@ input:focus {
   top: 0;
   left: 0;
   width: 100%;
-  visibility: hidden;
+  /* visibility: hidden; */
+  z-index: 10;
 }
 .show-login-modal {
   visibility: visible;
@@ -210,18 +211,20 @@ input:focus {
   height: 300px;
   background: white;
   position: relative;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
-.login-form {
-  flex-direction: column;
-}
+
 input {
   font-size: 1.2em;
   margin-bottom: 20px;
   padding: 10px 20px;
   border: 1px solid #888;
+  width: 100%;
+  text-align: center;
 }
 .login-form button {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 5px 20px;
@@ -229,6 +232,7 @@ input {
   transition: transform 0.32s ease;
   background: #ee61b1;
   color: white;
+  width: 100%;
   margin-top: 10px;
 }
 .login-form button:hover {
@@ -237,6 +241,8 @@ input {
   color: #140411;
   border: 2px solid #00b1ff;
 }
+
+/* Close Modal Button */
 .close-modal {
   position: absolute;
   right: 10px;
@@ -264,3 +270,25 @@ input {
 }
 
 /* Media Queries for mobile View */
+@media (max-width: 600px) {
+  .login-modal {
+    width: 80%;
+    height: 280px;
+    border-radius: 0px;
+    padding: 12px 20px 0px;
+  }
+
+  input {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    padding: 8px 0px;
+    border: 1px solid #999;
+  }
+  .login-form button {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 8px 0px;
+    margin-top: 16px;
+  }
+}

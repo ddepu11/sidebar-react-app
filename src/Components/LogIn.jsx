@@ -14,7 +14,7 @@ const LogIn = () => {
       }
     >
       <div className="login-modal flex">
-        <form className="login-form flex" onSubmit={(e) => e.preventDefault()}>
+        <form className="login-form" onSubmit={(e) => e.preventDefault()}>
           <input type="text" placeholder="Enter Your Email" />
           <input type="password" placeholder="Enter Your Password" />
           <button type="submit">Login</button>
