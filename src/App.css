@@ -199,7 +199,7 @@ input:focus {
   top: 0;
   left: 0;
   width: 100%;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .show-login-modal {
   visibility: visible;
@@ -209,6 +209,7 @@ input:focus {
   width: 40%;
   height: 300px;
   background: white;
+  position: relative;
 }
 .login-form {
   flex-direction: column;
@@ -225,7 +226,7 @@ input {
   letter-spacing: 3px;
   padding: 5px 20px;
   font-weight: 400;
-  transition: all 0.32s ease;
+  transition: transform 0.32s ease;
   background: #ee61b1;
   color: white;
   margin-top: 10px;
@@ -236,7 +237,14 @@ input {
   color: #140411;
   border: 2px solid #00b1ff;
 }
-
+.close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.3em;
+  color: #f33c3c;
+  cursor: pointer;
+}
 @media (max-width: 850px) {
   .sidebar {
     width: 100%;
