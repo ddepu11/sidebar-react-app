@@ -118,6 +118,9 @@ input:focus {
   position: fixed;
   transition: all 1s ease;
   transform: translateX(-100%);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .show-sidebar {
@@ -127,11 +130,12 @@ input:focus {
 .hide-sidebar {
   transform: translateX(-100%);
 }
-
-/* Sidebar Header */
 .header {
+  width: 100%;
   justify-content: space-between;
 }
+
+/* Sidebar Header */
 .hLeft span {
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -142,32 +146,32 @@ input:focus {
 
 /* Sidebar Links */
 .links {
-  margin-top: 50px;
+  transform: translateY(-30px);
   padding: 0 0 0 10px;
 }
 .link {
   justify-content: flex-start;
-  padding: 15px 0;
+  padding: 20px 0;
   cursor: pointer;
 }
 .link span:first-child {
-  font-size: 2.3em;
+  font-size: 2.2em;
   margin-right: 20px;
 }
 
 .link span:nth-child(2) {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-transform: capitalize;
   letter-spacing: 2px;
 }
 
 /* Side bar Social-links */
 .social-links {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
-  margin-top: 140px;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
+
 .social-links > * {
   color: #140411;
   padding: 0 15px 0;
@@ -193,15 +197,16 @@ input:focus {
 
 /* Login Modal */
 .login-modal-bg {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   height: 100%;
   top: 0;
   left: 0;
   width: 100%;
-  /* visibility: hidden; */
-  z-index: 10;
+  visibility: hidden;
+  z-index: 5;
 }
+
 .show-login-modal {
   visibility: visible;
 }
@@ -290,5 +295,46 @@ input {
     letter-spacing: 4px;
     padding: 8px 0px;
     margin-top: 16px;
+  }
+
+  .links {
+    transform: translateY(30px);
+  }
+  .link {
+    padding: 12px 0;
+  }
+  .link span:first-child {
+    font-size: 2em;
+    margin-right: 25px;
+  }
+  .link span:nth-child(2) {
+    font-size: 1.2em;
+  }
+  .social-links {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-size: 1.2em;
+  }
+  .social-links > * {
+    color: #140411;
+    padding: 0 10px 0;
+  }
+  .login {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+  .menu {
+    font-size: 1.5em;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: black;
+    cursor: pointer;
+    animation: shrink-grow 2s infinite linear;
+  }
+  .hLeft span {
+    font-size: 1.05em;
+    letter-spacing: 2px;
   }
 }

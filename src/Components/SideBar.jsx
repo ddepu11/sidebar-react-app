@@ -9,7 +9,11 @@ const SideBar = () => {
 
   return (
     // "sidebar card"
-    <div className={showSideBar ? "sidebar card show-sidebar" : "sidebar card"}>
+    <div
+      className={
+        showSideBar ? "sidebar card flex show-sidebar" : "sidebar card flex"
+      }
+    >
       <SideBarHeader />
       <Links />
       <SocialLinks />
