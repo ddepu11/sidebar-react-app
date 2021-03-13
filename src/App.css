@@ -17,8 +17,9 @@
     #fd3a65,
     #eb4b12
   );
-  padding: 10px 25px;
-  border-radius: 20px;
+  /* padding: 10px 25px;
+  border-radius: 20px; */
+  padding: 20px 10px;
 }
 
 * {
@@ -27,25 +28,45 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 body {
   min-height: 100vh;
-  background: linear-gradient(to right, #000000, #434343);
+  background-image: linear-gradient(
+    to right top,
+    #e956aa,
+    #fc5d77,
+    #f3784a,
+    #d5962c,
+    #aab034,
+    #79bd61,
+    #44c493,
+    #00c7bf,
+    #00bfe6,
+    #00b1ff,
+    #879afe,
+    #d17ada
+  );
   color: white;
 }
+
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
+
 img {
   width: 100%;
 }
+
 a {
   display: inline-block;
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
 }
+
 button {
   border: 0;
 }
@@ -53,10 +74,103 @@ button {
 button:hover {
   cursor: pointer;
 }
+
 input {
   border: 0;
 }
 button:focus,
 input:focus {
   outline: 0;
+}
+
+.menu {
+  font-size: 2em;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  color: black;
+  cursor: pointer;
+  animation: shrink-grow 2s infinite linear;
+}
+.sidebar {
+  background-image: linear-gradient(
+    to right top,
+    #be5691,
+    #ba62a5,
+    #b26eb8,
+    #a87bc9,
+    #9b87d8,
+    #a787d9,
+    #b288d9,
+    #bd88d9,
+    #de7cc3,
+    #f473a5,
+    #fe7282,
+    #fb7a5f
+  );
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  transition: transform 1s ease;
+  transform: translateX(-100%);
+}
+.show-sidebar {
+  transform: translateX(0%);
+}
+.hide-sidebar {
+  transform: translateX(-100%);
+}
+
+.header {
+  justify-content: space-between;
+}
+.hLeft span {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.hRight {
+  cursor: pointer;
+}
+
+.links {
+  margin-top: 50px;
+  padding: 0 0 0 10px;
+}
+.link {
+  justify-content: flex-start;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.link span:first-child {
+  font-size: 2.3em;
+  margin-right: 20px;
+}
+
+.link span:nth-child(2) {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.social-links {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 140px;
+  font-size: 1.5em;
+}
+.social-links > * {
+  color: #140411;
+  padding: 0 15px 0;
+}
+
+@keyframes shrink-grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
