@@ -34,7 +34,11 @@ function App() {
         <div className="menu" onClick={displaySideBar}>
           <FaBars />
         </div>
+
         <button className="login">Log In</button>
+
+        <LogIn />
+
         <SideBar />
       </AppContext.Provider>
     </div>
