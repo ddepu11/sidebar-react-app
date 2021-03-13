@@ -1,0 +1,2 @@
+(this["webpackJsonpsidebar-react-app"]=this["webpackJsonpsidebar-react-app"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);n(1);var r=n(3),c=n.n(r),s=(n(8),n(0));var a=function(){return Object(s.jsx)("div",{children:Object(s.jsx)("h1",{children:"App"})})};c.a.render(Object(s.jsx)(a,{}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.45542e23.chunk.js.map
