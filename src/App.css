@@ -337,4 +337,7 @@ input {
     font-size: 1.05em;
     letter-spacing: 2px;
   }
+  .card {
+    padding: 10px 10px 15px;
+  }
 }
