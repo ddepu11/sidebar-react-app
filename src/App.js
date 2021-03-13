@@ -8,7 +8,7 @@ const AppContext = createContext();
 
 function App() {
   const [showSideBar, setShowSideBar] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showLogInModal, setShowLogInModal] = useState(false);
 
   const displaySideBar = () => {
     setShowSideBar(true);
@@ -18,24 +18,32 @@ function App() {
     setShowSideBar(false);
   };
 
-  const displayModal = () => {
-    setShowModal(true);
+  const displayLogInModal = () => {
+    setShowLogInModal(true);
   };
 
-  const hideModal = () => {
-    setShowModal(false);
+  const hideLogInModal = () => {
+    setShowLogInModal(false);
   };
 
   return (
     <div className="container">
       <AppContext.Provider
-        value={{ showSideBar, showModal, hideSideBar, displayModal, hideModal }}
+        value={{
+          showSideBar,
+          showLogInModal,
+          hideSideBar,
+          displayLogInModal,
+          hideLogInModal,
+        }}
       >
         <div className="menu" onClick={displaySideBar}>
           <FaBars />
         </div>
 
-        <button className="login">Log In</button>
+        <button className="login" onClick={displayLogInModal}>
+          Log In
+        </button>
 
         <LogIn />
 
